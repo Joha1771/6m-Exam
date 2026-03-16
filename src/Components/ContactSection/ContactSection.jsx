@@ -3,7 +3,7 @@ import gardenCareImg from "../../assets/Icons/FooterCactus1.svg";
 import plantRenovationImg from "../../assets/Icons/FooterCactus2.svg";
 import wateringGardenImg from "../../assets/Icons/FooterCactus3.svg";
 import logoIcon from "../../assets/Icons/logo.svg";
-import locationIcon from "../../assets/Icons/location.svg";
+import locationIcon from "../../assets/Icons/Location.svg";
 import emailIcon from "../../assets/Icons/Message.svg";
 import phoneIcon from "../../assets/Icons/Calling.svg";
 

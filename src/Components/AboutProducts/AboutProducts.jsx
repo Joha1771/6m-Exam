@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../../Config/axios.config";
-import cart from "../../Assets/Icons/MobileCart.svg";
+import cart from "../../assets/Icons/MobileCart.svg";
 
 const SIZES = ["S", "M", "L", "XL"];
 
