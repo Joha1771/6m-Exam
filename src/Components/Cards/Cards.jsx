@@ -16,6 +16,7 @@ const Cards = () => {
         const res = await api.get(
           `/products?page=${currentPage}&limit=${limit}`,
         );
+        console.log("Cards API Response:", res.data);
         setSlides(res.data.products);
       } catch (err) {
         console.log(err);
@@ -34,8 +35,8 @@ const Cards = () => {
           ? Array.from({ length: limit }, (_, i) => <Skeleton key={i} />)
           : slides.map((slide) => (
               <Link
-                key={slide.id}
-                to={`/products/${slide.id}`}
+                key={slide._id}
+                to={`/products/${slide._id}`}
                 className="max-w-[175px] flex flex-col gap-[9px]"
               >
                 <img
