@@ -1,28 +1,64 @@
 import React, { useState } from "react";
 import logoIcon from "../../assets/Icons/logo.svg";
-import locationIcon from "../../assets/Icons/location.svg";
+import locationIcon from "../../assets/Icons/Location.svg";
 import emailIcon from "../../assets/Icons/Message.svg";
 import phoneIcon from "../../assets/Icons/Calling.svg";
 import gardenCareImg from "../../assets/Icons/FooterCactus1.svg";
 import plantRenovationImg from "../../assets/Icons/FooterCactus2.svg";
 import wateringGardenImg from "../../assets/Icons/FooterCactus3.svg";
 import paymentMethodsImg from "../../assets/Icons/FooterPayment.svg";
-import facebookIcon from "../../assets/Icons/facebook.svg";
-import instagramIcon from "../../assets/Icons/instagram.svg";
-import twitterIcon from "../../assets/Icons/twitter.svg";
-import linkedinIcon from "../../assets/Icons/linkedin.svg";
+import facebookIcon from "../../assets/Icons/Facebook.svg";
+import instagramIcon from "../../assets/Icons/Instagram.svg";
+import twitterIcon from "../../assets/Icons/Twitter.svg";
+import linkedinIcon from "../../assets/Icons/Linkedin.svg";
 import unionIcon from "../../assets/Icons/Union.svg";
 
 const categories = [
-  { image: gardenCareImg, title: "Garden Care", description: "We are an online plant shop offering a wide range of cheap and trendy plants." },
-  { image: plantRenovationImg, title: "Plant Renovation", description: "We are an online plant shop offering a wide range of cheap and trendy plants." },
-  { image: wateringGardenImg, title: "Watering Garden", description: "We are an online plant shop offering a wide range of cheap and trendy plants." },
+  {
+    image: gardenCareImg,
+    title: "Garden Care",
+    description:
+      "We are an online plant shop offering a wide range of cheap and trendy plants.",
+  },
+  {
+    image: plantRenovationImg,
+    title: "Plant Renovation",
+    description:
+      "We are an online plant shop offering a wide range of cheap and trendy plants.",
+  },
+  {
+    image: wateringGardenImg,
+    title: "Watering Garden",
+    description:
+      "We are an online plant shop offering a wide range of cheap and trendy plants.",
+  },
 ];
 
 const footerLinks = [
-  { title: "My Account", links: ["My Account", "Our stores", "Contact us", "Career", "Specials"] },
-  { title: "Help & Guide", links: ["Help Center", "How to Buy", "Shipping & Delivery", "Product Policy", "How to Return"] },
-  { title: "Categories", links: ["House Plants", "Potter Plants", "Seeds", "Small Plants", "Accessories"] },
+  {
+    title: "My Account",
+    links: ["My Account", "Our stores", "Contact us", "Career", "Specials"],
+  },
+  {
+    title: "Help & Guide",
+    links: [
+      "Help Center",
+      "How to Buy",
+      "Shipping & Delivery",
+      "Product Policy",
+      "How to Return",
+    ],
+  },
+  {
+    title: "Categories",
+    links: [
+      "House Plants",
+      "Potter Plants",
+      "Seeds",
+      "Small Plants",
+      "Accessories",
+    ],
+  },
 ];
 
 const socialLinks = [
@@ -46,18 +82,28 @@ const DesktopFooter = () => {
             {categories.map((cat, i) => (
               <div key={i} className="flex items-start gap-4">
                 <div className="w-14 h-14 shrink-0 flex items-center justify-center">
-                  <img src={cat.image} alt={cat.title} className="w-full h-full object-contain" />
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm text-gray-800 mb-1">{cat.title}</h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">{cat.description}</p>
+                  <h3 className="font-bold text-sm text-gray-800 mb-1">
+                    {cat.title}
+                  </h3>
+                  <p className="text-xs text-gray-500 leading-relaxed">
+                    {cat.description}
+                  </p>
                 </div>
               </div>
             ))}
 
             {/* Newsletter */}
             <div className="flex flex-col gap-3">
-              <h3 className="font-bold text-sm text-gray-800">Would you like to join newsletters?</h3>
+              <h3 className="font-bold text-sm text-gray-800">
+                Would you like to join newsletters?
+              </h3>
               <div className="flex gap-2">
                 <input
                   type="email"
@@ -74,7 +120,8 @@ const DesktopFooter = () => {
                 </button>
               </div>
               <p className="text-xs text-gray-500 leading-relaxed">
-                We usually post offers and challenges in newsletter. We're your online houseplant destination.
+                We usually post offers and challenges in newsletter. We're your
+                online houseplant destination.
               </p>
             </div>
           </div>
@@ -90,7 +137,11 @@ const DesktopFooter = () => {
               <img src={logoIcon} alt="GreenShop" className="h-8 w-fit" />
               <div className="flex flex-col gap-2.5 text-sm text-gray-600">
                 <div className="flex items-start gap-2">
-                  <img src={locationIcon} alt="" className="w-4 h-4 mt-0.5 shrink-0" />
+                  <img
+                    src={locationIcon}
+                    alt=""
+                    className="w-4 h-4 mt-0.5 shrink-0"
+                  />
                   <span>70 West Buckingham Ave. Farmingdale, NY 11735</span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -107,11 +158,16 @@ const DesktopFooter = () => {
             {/* Links */}
             {footerLinks.map((section, i) => (
               <div key={i}>
-                <h4 className="font-bold text-sm text-gray-800 mb-4">{section.title}</h4>
+                <h4 className="font-bold text-sm text-gray-800 mb-4">
+                  {section.title}
+                </h4>
                 <ul className="flex flex-col gap-2">
                   {section.links.map((link, j) => (
                     <li key={j}>
-                      <a href="#" className="text-sm text-gray-500 hover:text-[#46A358] transition-colors">
+                      <a
+                        href="#"
+                        className="text-sm text-gray-500 hover:text-[#46A358] transition-colors"
+                      >
                         {link}
                       </a>
                     </li>
@@ -127,7 +183,11 @@ const DesktopFooter = () => {
               <h4 className="font-bold text-sm text-gray-800">Social Media</h4>
               <div className="flex items-center gap-2">
                 {socialLinks.map((s, i) => (
-                  <a key={i} href="#" className="w-9 h-9 rounded border border-gray-200 bg-white flex items-center justify-center hover:border-[#46A358] hover:bg-[#f0faf2] transition-colors">
+                  <a
+                    key={i}
+                    href="#"
+                    className="w-9 h-9 rounded border border-gray-200 bg-white flex items-center justify-center hover:border-[#46A358] hover:bg-[#f0faf2] transition-colors"
+                  >
                     <img src={s.icon} alt={s.label} className="w-4 h-4" />
                   </a>
                 ))}
@@ -135,7 +195,11 @@ const DesktopFooter = () => {
             </div>
             <div className="flex flex-col gap-3 items-end">
               <h4 className="font-bold text-sm text-gray-800">We accept</h4>
-              <img src={paymentMethodsImg} alt="Payment methods" className="h-8 object-contain" />
+              <img
+                src={paymentMethodsImg}
+                alt="Payment methods"
+                className="h-8 object-contain"
+              />
             </div>
           </div>
         </div>
@@ -143,7 +207,9 @@ const DesktopFooter = () => {
 
       {/* Copyright */}
       <div className="bg-white border-t border-gray-100 py-4">
-        <p className="text-xs text-gray-400 text-center">© 2021 GreenShop. All Rights Reserved.</p>
+        <p className="text-xs text-gray-400 text-center">
+          © 2021 GreenShop. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
