@@ -11,12 +11,10 @@ const DesktopNavbar = () => {
   return (
     <header className="hidden md:flex fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-100 shadow-sm">
       <div className="max-w-[1200px] mx-auto w-full px-8 h-[70px] flex items-center justify-between gap-8">
-        {/* Logo */}
         <div className="flex items-center gap-2 shrink-0 cursor-pointer">
           <img src={logoIcon} alt="GreenShop" className="h-8" />
         </div>
 
-        {/* Nav links */}
         <nav className="flex items-center gap-8">
           {navLinks.map((label) => (
             <button
@@ -36,7 +34,6 @@ const DesktopNavbar = () => {
           ))}
         </nav>
 
-        {/* Search + Login */}
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2 bg-[#f8f8f8] rounded-lg px-3 py-2 w-[220px]">
             <img src={searchIcon} alt="search" className="w-4 h-4 opacity-50" />
@@ -64,13 +61,13 @@ const DesktopNavbar = () => {
             </svg>
             Login
           </button>
-          <button className="relative">
+          <button className="relative text-gray-500 hover:text-[#46A358] transition-colors">
             <svg
               width="22"
               height="22"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#555"
+              stroke="currentColor"
               strokeWidth="1.8"
               strokeLinecap="round"
               strokeLinejoin="round"

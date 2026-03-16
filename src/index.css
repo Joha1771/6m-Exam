@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Smooth hover transitions for interactive elements */
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply transition duration-200 ease-in-out;
+  }
+
+  /* Ensure interactive elements have pointer cursor */
+  a,
+  button {
+    @apply cursor-pointer;
+  }
+}

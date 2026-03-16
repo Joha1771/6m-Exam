@@ -34,23 +34,34 @@ const MobileNavbar = () => {
           <img src={NavbarBg} alt="Navbar Background" className="w-full" />
           <div className="absolute inset-0 flex justify-between items-center px-10 pt-10">
             <div className="flex items-center gap-7">
-              <Link to="/" className="flex flex-col items-center">
-                <HomeIcon className="text-[#D9D9D9] w-6 h-6" />
-                <span className="text-xs text-[#D9D9D9] mt-1">Home</span>
+              <Link to="/" className="group flex flex-col items-center">
+                <HomeIcon className="text-[#D9D9D9] group-hover:text-[#46A358] transition-colors w-6 h-6" />
+                <span className="text-xs text-[#D9D9D9] group-hover:text-[#46A358] mt-1 transition-colors">
+                  Home
+                </span>
               </Link>
-              <Link to="/favorites" className="flex flex-col items-center">
-                <HeartIcon className="text-[#D9D9D9] w-6 h-6" />
-                <span className="text-xs text-[#D9D9D9] mt-1">Favorites</span>
+              <Link
+                to="/favorites"
+                className="group flex flex-col items-center"
+              >
+                <HeartIcon className="text-[#D9D9D9] group-hover:text-[#46A358] transition-colors w-6 h-6" />
+                <span className="text-xs text-[#D9D9D9] group-hover:text-[#46A358] mt-1 transition-colors">
+                  Favorites
+                </span>
               </Link>
             </div>
             <div className="flex items-center gap-10">
-              <Link to="/cart" className="flex flex-col items-center">
-                <CartIcon className="text-[#D9D9D9] w-6 h-6" />
-                <span className="text-xs text-[#D9D9D9] mt-1">Cart</span>
+              <Link to="/cart" className="group flex flex-col items-center">
+                <CartIcon className="text-[#D9D9D9] group-hover:text-[#46A358] transition-colors w-6 h-6" />
+                <span className="text-xs text-[#D9D9D9] group-hover:text-[#46A358] mt-1 transition-colors">
+                  Cart
+                </span>
               </Link>
-              <Link to="/profile" className="flex flex-col items-center">
-                <UserIcon className="text-[#D9D9D9] w-6 h-6" />
-                <span className="text-xs text-[#D9D9D9] mt-1">Profile</span>
+              <Link to="/profile" className="group flex flex-col items-center">
+                <UserIcon className="text-[#D9D9D9] group-hover:text-[#46A358] transition-colors w-6 h-6" />
+                <span className="text-xs text-[#D9D9D9] group-hover:text-[#46A358] mt-1 transition-colors">
+                  Profile
+                </span>
               </Link>
             </div>
           </div>
