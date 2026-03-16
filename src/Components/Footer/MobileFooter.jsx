@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import paymentMethodsImg from "../../assets/Icons/FooterPayment.svg";
-import facebookIcon from "../../assets/Icons/facebook.svg";
-import instagramIcon from "../../assets/Icons/instagram.svg";
-import twitterIcon from "../../assets/Icons/twitter.svg";
-import linkedinIcon from "../../assets/Icons/linkedin.svg";
+import facebookIcon from "../../assets/Icons/Facebook.svg";
+import instagramIcon from "../../assets/Icons/Instagram.svg";
+import twitterIcon from "../../assets/Icons/Twitter.svg";
+import linkedinIcon from "../../assets/Icons/Linkedin.svg";
 import unionIcon from "../../assets/Icons/Union.svg";
 
 const socialLinks = [

@@ -17,10 +17,15 @@ const DesktopProducts = () => {
     const get = async () => {
       setIsLoading(true);
       try {
-        const res = await api.get(`/products?page=${currentPage}&limit=${limit}`);
+        const res = await api.get(
+          `/products?page=${currentPage}&limit=${limit}`,
+        );
         setSlides(res.data.products);
-      } catch (e) { console.log(e); }
-      finally { setIsLoading(false); }
+      } catch (e) {
+        console.log(e);
+      } finally {
+        setIsLoading(false);
+      }
     };
     get();
   }, [currentPage]);
@@ -87,28 +92,72 @@ const DesktopProducts = () => {
                       </span>
                     )}
                     {/* Hover actions */}
-                    <div className={`absolute bottom-0 left-0 right-0 flex items-center justify-center gap-3 bg-white/90 py-3 transition-all duration-300 ${hoveredId === slide._id ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-                      <button className="p-2 hover:text-[#46A358] transition-colors" title="Add to cart">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    <div
+                      className={`absolute bottom-0 left-0 right-0 flex items-center justify-center gap-3 bg-white/90 py-3 transition-all duration-300 ${hoveredId === slide._id ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                    >
+                      <button
+                        className="p-2 hover:text-[#46A358] transition-colors"
+                        title="Add to cart"
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <circle cx="9" cy="21" r="1" />
+                          <circle cx="20" cy="21" r="1" />
+                          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
                         </svg>
                       </button>
-                      <button className="p-2 hover:text-[#46A358] transition-colors" title="Wishlist">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                      <button
+                        className="p-2 hover:text-[#46A358] transition-colors"
+                        title="Wishlist"
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                         </svg>
                       </button>
-                      <button className="p-2 hover:text-[#46A358] transition-colors" title="Quick view">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                      <button
+                        className="p-2 hover:text-[#46A358] transition-colors"
+                        title="Quick view"
+                      >
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <circle cx="11" cy="11" r="8" />
+                          <path d="m21 21-4.35-4.35" />
                         </svg>
                       </button>
                     </div>
                   </div>
-                  <h3 className="font-semibold text-gray-800 group-hover:text-[#46A358] transition-colors">{slide.name}</h3>
+                  <h3 className="font-semibold text-gray-800 group-hover:text-[#46A358] transition-colors">
+                    {slide.name}
+                  </h3>
                   <div className="flex items-center gap-2">
-                    <span className="text-[#46A358] font-bold">${slide.price.toFixed(2)}</span>
+                    <span className="text-[#46A358] font-bold">
+                      ${slide.price.toFixed(2)}
+                    </span>
                     {slide.discount > 0 && (
                       <span className="text-gray-400 text-sm line-through">
                         ${(slide.price / (1 - slide.discount / 100)).toFixed(2)}
@@ -138,8 +187,17 @@ const DesktopProducts = () => {
             onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
             className="w-10 h-10 flex items-center justify-center rounded border border-gray-200 text-gray-500 hover:border-[#46A358] hover:text-[#46A358] transition-all"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M9 18l6-6-6-6"/>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M9 18l6-6-6-6" />
             </svg>
           </button>
         </div>
